@@ -1,0 +1,528 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{11D6E011-3D2D-4250-AEEF-F7997402B1CF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>图书管理系统</RootNamespace>
+    <AssemblyName>图书管理系统</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\book-img2ico.net.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data.SQLite, Version=1.0.94.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SQLite\2013\bin\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Book\Cate\FindBookCate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Book\Cate\FindBookCate.Designer.cs">
+      <DependentUpon>FindBookCate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Borrow\BorrowHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Borrow\BorrowHelp.Designer.cs">
+      <DependentUpon>BorrowHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System\BakDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System\BakDB.Designer.cs">
+      <DependentUpon>BakDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Book\Cate\BookCateEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Book\Cate\BookCateEdit.Designer.cs">
+      <DependentUpon>BookCateEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Book\Cate\BookCateAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Book\Cate\BookCateAdd.Designer.cs">
+      <DependentUpon>BookCateAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Book\BookEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Book\BookEdit.Designer.cs">
+      <DependentUpon>BookEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Book\Cate\BookCateManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Book\Cate\BookCateManage.Designer.cs">
+      <DependentUpon>BookCateManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Borrow\BorrowBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Borrow\BorrowBook.Designer.cs">
+      <DependentUpon>BorrowBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Borrow\BorrowHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Borrow\BorrowHistory.Designer.cs">
+      <DependentUpon>BorrowHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Borrow\BorrowManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Borrow\BorrowManage.Designer.cs">
+      <DependentUpon>BorrowManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System\EditPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System\EditPassword.Designer.cs">
+      <DependentUpon>EditPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reader\FindReader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reader\FindReader.Designer.cs">
+      <DependentUpon>FindReader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reader\Cate\FindReaderCate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reader\Cate\FindReaderCate.Designer.cs">
+      <DependentUpon>FindReaderCate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System\SystemSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System\SystemSetting.Designer.cs">
+      <DependentUpon>SystemSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\FindUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\FindUser.Designer.cs">
+      <DependentUpon>FindUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Book\FindBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Book\FindBook.Designer.cs">
+      <DependentUpon>FindBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Book\BookManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Book\BookManage.Designer.cs">
+      <DependentUpon>BookManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Log\LogShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Log\LogShow.Designer.cs">
+      <DependentUpon>LogShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Log\LogShowMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Log\LogShowMessage.Designer.cs">
+      <DependentUpon>LogShowMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Book\BookAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Book\BookAdd.Designer.cs">
+      <DependentUpon>BookAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Book\SelectBookCate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Book\SelectBookCate.Designer.cs">
+      <DependentUpon>SelectBookCate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="System\SystemMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="System\SystemMain.Designer.cs">
+      <DependentUpon>SystemMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reader\Cate\ReaderCateAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reader\Cate\ReaderCateAdd.Designer.cs">
+      <DependentUpon>ReaderCateAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reader\Cate\ReaderCateEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reader\Cate\ReaderCateEdit.Designer.cs">
+      <DependentUpon>ReaderCateEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reader\ReaderAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reader\ReaderAdd.Designer.cs">
+      <DependentUpon>ReaderAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reader\ReaderEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reader\ReaderEdit.Designer.cs">
+      <DependentUpon>ReaderEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\UserEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\UserEdit.Designer.cs">
+      <DependentUpon>UserEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\UserAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\UserAdd.Designer.cs">
+      <DependentUpon>UserAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reader\ReaderManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reader\ReaderManage.Designer.cs">
+      <DependentUpon>ReaderManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reader\Cate\ReaderCateManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reader\Cate\ReaderCateManage.Designer.cs">
+      <DependentUpon>ReaderCateManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\UserManages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\UserManages.Designer.cs">
+      <DependentUpon>UserManages.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Book\Cate\FindBookCate.resx">
+      <DependentUpon>FindBookCate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Borrow\BorrowHelp.resx">
+      <DependentUpon>BorrowHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System\BakDB.resx">
+      <DependentUpon>BakDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Book\Cate\BookCateEdit.resx">
+      <DependentUpon>BookCateEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Book\Cate\BookCateAdd.resx">
+      <DependentUpon>BookCateAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Book\BookEdit.resx">
+      <DependentUpon>BookEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Book\Cate\BookCateManage.resx">
+      <DependentUpon>BookCateManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Borrow\BorrowBook.resx">
+      <DependentUpon>BorrowBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Borrow\BorrowHistory.resx">
+      <DependentUpon>BorrowHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Borrow\BorrowManage.resx">
+      <DependentUpon>BorrowManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System\EditPassword.resx">
+      <DependentUpon>EditPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reader\FindReader.resx">
+      <DependentUpon>FindReader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reader\Cate\FindReaderCate.resx">
+      <DependentUpon>FindReaderCate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System\SystemSetting.resx">
+      <DependentUpon>SystemSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\FindUser.resx">
+      <DependentUpon>FindUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Book\FindBook.resx">
+      <DependentUpon>FindBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Book\BookManage.resx">
+      <DependentUpon>BookManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Log\LogShow.resx">
+      <DependentUpon>LogShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Log\LogShowMessage.resx">
+      <DependentUpon>LogShowMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Book\BookAdd.resx">
+      <DependentUpon>BookAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Book\SelectBookCate.resx">
+      <DependentUpon>SelectBookCate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="System\SystemMain.resx">
+      <DependentUpon>SystemMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reader\Cate\ReaderCateAdd.resx">
+      <DependentUpon>ReaderCateAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reader\Cate\ReaderCateEdit.resx">
+      <DependentUpon>ReaderCateEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reader\ReaderAdd.resx">
+      <DependentUpon>ReaderAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reader\ReaderEdit.resx">
+      <DependentUpon>ReaderEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\UserEdit.resx">
+      <DependentUpon>UserEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\UserAdd.resx">
+      <DependentUpon>UserAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reader\ReaderManage.resx">
+      <DependentUpon>ReaderManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reader\Cate\ReaderCateManage.resx">
+      <DependentUpon>ReaderCateManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\UserManages.resx">
+      <DependentUpon>UserManages.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
+      <Project>{2df0afba-5354-4c1f-ab12-66408ddca284}</Project>
+      <Name>ClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ截图20141015195812.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\023.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application_view_tile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet_pink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page_white_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\未标题.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\book-img2ico.net.ico" />
+    <None Include="Resources\group_key.png" />
+    <None Include="Resources\arrow_refresh.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
